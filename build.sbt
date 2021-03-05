@@ -25,7 +25,7 @@ javacOptions ++= Seq("-source", "8", "-target", "8")
 libraryDependencies ++= Seq(
 )
 
-// misc
-shellPrompt in ThisBuild := { state =>
+// MIsc
+ThisBuild / shellPrompt := { state =>
   scala.Console.MAGENTA + Project.extract(state).currentRef.project + " > " + scala.Console.RESET
 }
